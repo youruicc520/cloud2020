@@ -1,0 +1,22 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: nacos-payment-provider
+  cloud:
+    nacos:
+      discovery:
+        #server-addr: localhost:8848 #配置Nacos地址
+        # linix版的nacos集群配置+nginx集群配置,访问的是虚拟ip,nginx转发到nacos机器
+        server-addr: 192.168.125.50:1111
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+
+
+

@@ -1,0 +1,15 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-consumer-payment
+
+  zipkin:
+    base-url: http://localhost:9411
+    sleuth:
+      sampler:
+        probability: 1
+  cloud:
+    zookeeper:
+      connect-string: 192.168.125.104:2181,192.168.125.105:2181,192.168.125.106:2181
